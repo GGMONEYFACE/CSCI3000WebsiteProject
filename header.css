@@ -8,12 +8,13 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
+    margin: 0;
 }
 
 header {
     position: relative;
     width: 100%;
-    min-height: 500px;
+    height: 50vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
                 url('images/IMG_9138.jpg') center/cover no-repeat;
     display: flex;
