@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKAF POC - Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>CKAF POC</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/dashboard">Dashboard</a>
+            <% if (user.role === 'admin') { %>
+                <a href="/admin">Admin</a>
+            <% } %>
+            <form action="/auth/logout" method="POST" style="display: inline;">
+                <button type="submit">Logout</button>
+            </form>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Dashboard</h2>
+        <p>Welcome, <%= user.name %>!</p>
+        <p>Your role: <strong><%= user.role %></strong></p>
+
+        <div class="dashboard-content">
+            <% if (user.role === 'member') { %>
+                <h3>Member Content</h3>
+                <p>Basic member information and resources.</p>
+            <% } %>
+
+            <% if (user.role === 'instructor' || user.role === 'admin') { %>
+                <h3>Instructor Content</h3>
+                <p>Advanced teaching materials and resources.</p>
+            <% } %>
+
+            <% if (user.role === 'admin') { %>
+                <h3>Admin Content</h3>
+                <p>Administrative tools and user management.</p>
+                <a href="/admin/users">Manage Users</a>
+            <% } %>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Christian Karate Academy Federation - POC</p>
+    </footer>
+</body>
+</html>

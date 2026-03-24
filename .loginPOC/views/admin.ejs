@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKAF POC - Admin</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>CKAF POC - Admin</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/admin">Admin</a>
+            <form action="/auth/logout" method="POST" style="display: inline;">
+                <button type="submit">Logout</button>
+            </form>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Admin Panel</h2>
+        <p>Welcome, Admin <%= user.name %>!</p>
+
+        <div class="admin-menu">
+            <a href="/admin/users">Manage Users</a>
+            <a href="/admin/settings">Settings</a>
+            <a href="/admin/logs">View Logs</a>
+        </div>
+
+        <div class="admin-stats">
+            <h3>Quick Stats</h3>
+            <p>Total Users: <span id="total-users">Loading...</span></p>
+            <p>Active Users: <span id="active-users">Loading...</span></p>
+            <p>Admins: <span id="admin-count">Loading...</span></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Christian Karate Academy Federation - POC</p>
+    </footer>
+
+    <script>
+        // Load stats
+        fetch('/api/stats')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('total-users').textContent = data.totalUsers;
+                document.getElementById('active-users').textContent = data.activeUsers;
+                document.getElementById('admin-count').textContent = data.adminCount;
+            })
+            .catch(err => console.error('Error loading stats:', err));
+    </script>
+</body>
+</html>

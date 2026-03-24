@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKAF POC - Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>CKAF POC</h1>
+        <nav>
+            <a href="/">Home</a>
+            <% if (user) { %>
+                <a href="/dashboard">Dashboard</a>
+                <% if (user.role === 'admin') { %>
+                    <a href="/admin">Admin</a>
+                <% } %>
+                <form action="/auth/logout" method="POST" style="display: inline;">
+                    <button type="submit">Logout</button>
+                </form>
+            <% } else { %>
+                <a href="/auth/login">Login</a>
+                <a href="/auth/signup">Sign Up</a>
+            <% } %>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Welcome to CKAF Proof of Concept</h2>
+        <p>This is a sandbox for testing role-based access control.</p>
+
+        <% if (user) { %>
+            <p>Hello, <%= user.name %>! You are logged in as a <%= user.role %>.</p>
+        <% } else { %>
+            <p>Please <a href="/auth/login">login</a> or <a href="/auth/signup">sign up</a> to access more features.</p>
+        <% } %>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Christian Karate Academy Federation - POC</p>
+    </footer>
+</body>
+</html>
