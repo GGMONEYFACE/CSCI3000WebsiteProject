@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('images/IMG_9138.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+    animation: fadeInScale 1s ease-in-out;
+    margin-bottom: 30px;
+}
+
+/* Header Navigation */
+.header-nav {
+    width: 100%;
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.header-nav li {
+    margin: 0;
+}
+
+.header-nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header-nav li:last-child a {
+    border-right: none;
+}
+
+.header-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffeb3b;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header {
+        min-height: 400px;
+    }
+    
+    header h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    
+    .header-nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .header-nav a {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 10px 20px;
+    }
+    
+    .header-nav li:last-child a {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        min-height: 350px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .header-nav a {
+        padding: 10px 15px;
+        font-size: 0.95rem;
+    }
+}
