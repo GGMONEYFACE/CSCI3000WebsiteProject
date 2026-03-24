@@ -7,3 +7,8 @@ The goal is to create a website that will hold all of the information for Christ
 - Create basic CSS to begin to format the webpages
 - Add photos into the mix
 - Begin on the login form
+
+## Prototype 2 Goals
+- Rudimentary login processing
+- JavaScript on all webpages for animation and usability
+- Hidden pages only accessible with cookies from authentication
