@@ -12,15 +12,18 @@
 
 <header>
     <h1>Login</h1>
-    <nav class="header-nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="locations.html">Locations</a></li>
-            <li><a href="verses.html">Verses</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </nav>
+    <button id="menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 </header>
+
+<div id="sliding-menu" class="sliding-menu">
+    <div class="menu-content">
+        <div class="menu-line"><a href="index.html">home</a> <a href="locations.html">locations</a> <a href="verses.html">verses</a> <a href="login.html">login</a></div>
+    </div>
+</div>
 
 <div class="content">
     <h2>Member Login</h2>
@@ -54,5 +57,6 @@
     </div>
 </div>
 
+<script src="menu.js"></script>
 </body>
 </html>

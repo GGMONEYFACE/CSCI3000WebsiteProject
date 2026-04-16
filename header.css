@@ -36,41 +36,80 @@ header h1 {
     margin-bottom: 30px;
 }
 
-/* Header Navigation */
-.header-nav {
-    width: 100%;
+/* Menu Button */
+#menu-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
 }
 
-.header-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0;
-}
-
-.header-nav li {
-    margin: 0;
-}
-
-.header-nav a {
+#menu-button span {
     display: block;
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+#menu-button:hover span:nth-child(1) {
+    transform: rotate(45deg) translateY(5px);
+}
+
+#menu-button:hover span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-button:hover span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-5px);
+}
+
+/* Sliding Menu */
+.sliding-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.8);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.sliding-menu.open {
+    right: 0;
+}
+
+.menu-content {
+    text-align: center;
+    color: white;
+}
+
+.menu-line a {
     color: white;
     text-decoration: none;
-    padding: 12px 20px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 0 10px;
 }
 
-.header-nav li:last-child a {
-    border-right: none;
+.menu-line a:hover {
+    color: #ccc;
 }
 
-.header-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #ffeb3b;
+.close {
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+}
+
+.close:hover {
+    color: #ccc;
 }
 
 @keyframes fadeInScale {
@@ -93,21 +132,6 @@ header h1 {
     header h1 {
         font-size: 3rem;
         margin-bottom: 20px;
-    }
-    
-    .header-nav ul {
-        flex-direction: column;
-        gap: 0;
-    }
-    
-    .header-nav a {
-        border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-        padding: 10px 20px;
-    }
-    
-    .header-nav li:last-child a {
-        border-bottom: none;
     }
 }
 

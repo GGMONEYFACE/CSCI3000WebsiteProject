@@ -12,15 +12,18 @@
 
 <header>
     <h1>Locations</h1>
-    <nav class="header-nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="locations.html">Locations</a></li>
-            <li><a href="verses.html">Verses</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </nav>
+    <button id="menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 </header>
+
+<div id="sliding-menu" class="sliding-menu">
+    <div class="menu-content">
+        <div class="menu-line"><a href="index.html">home</a> <a href="locations.html">locations</a> <a href="verses.html">verses</a> <a href="login.html">login</a></div>
+    </div>
+</div>
 
 <div class="content">
     <h2>Our Locations</h2>
@@ -30,8 +33,11 @@
         <div class="location-card">
             <h3>Main Gym - Henry Baptist</h3>
             <p><strong>Address:</strong> 4035 Jodeco Rd, McDonough, GA 30253</p>
-            <p><strong>Phone:</strong> Contact us for details</p>
-            <p>Our main facility featuring state-of-the-art training equipment and certified instructors.</p>
+            <p><strong>Email:</strong> <a href="mailto:christiankarateacademy@gmail.com">christiankarateacademy@gmail.com</a></p>
+            <p><strong>Classes:</strong> All classes meet on Thursday nights at the following times:</p>
+            <p>Lil' Dragons: ages 4-6 - 5:30-6:00</p>
+            <p>Kids' Class: ages 7-12 - 6:00-7:00</p>
+            <p>Adult Class: age 13+ - 7:00-8:00.</p>
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.6565113909933!2d-84.183247!3d33.48429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f502a4b4b4b4b5%3A0x8b8b8b8b8b8b8b8b!2s4035%20Jodeco%20Rd%2C%20McDonough%2C%20GA%2030253!5e0!3m2!1sen!2sus!4v1600000000000" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
@@ -39,12 +45,12 @@
         
         <div class="location-card">
             <h3>Secondary Location</h3>
-            <p><strong>Address:</strong> Contact us for details</p>
-            <p><strong>Phone:</strong> Contact us for details</p>
+            <p><strong>Address:</strong> CURRENTLY IN TRANSITION</p>
             <p>Additional training facility. Check back for updates on our expanding locations.</p>
         </div>
     </div>
 </div>
 
+<script src="menu.js"></script>
 </body>
 </html>

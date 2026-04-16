@@ -12,15 +12,18 @@
 
 <header>
     <h1>Verses</h1>
-    <nav class="header-nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="locations.html">Locations</a></li>
-            <li><a href="verses.html" aria-current="page">Verses</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </nav>
+    <button id="menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 </header>
+
+<div id="sliding-menu" class="sliding-menu">
+    <div class="menu-content">
+        <div class="menu-line"><a href="index.html">Home</a> <a href="locations.html">Locations</a> <a href="verses.html">Verses</a> <a href="login.html">Login</a></div>
+    </div>
+</div>
 
 <div class="content">
     <div class="three-columns">
@@ -60,5 +63,6 @@
     </div>
 </div>
 
+<script src="menu.js"></script>
 </body>
 </html>
