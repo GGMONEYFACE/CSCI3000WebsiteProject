@@ -1,0 +1,107 @@
+.content {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.content h3 {
+    color: #B31E1E;
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.section-heading:first-of-type {
+    margin-top: 10px;
+}
+
+.note {
+    margin-top: 40px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* One-step Cards */
+.onesteps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.onestep-card {
+    background: #f8f9fa;
+    border-left: 5px solid #d9534f;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.onestep-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.onestep-card h3 {
+    color: #d9534f;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.onestep-card p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.onestep-card ol {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.onestep-card ol li {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .onesteps-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h2 {
+        font-size: 1.5rem;
+    }
+}
