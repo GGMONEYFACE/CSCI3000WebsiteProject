@@ -1,0 +1,110 @@
+.content {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.content h3 {
+    color: #B31E1E;
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.section-heading:first-child {
+    margin-top: 10px;
+}
+
+.steps-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.steps-list li {
+    background: #f8f9fa;
+    border-left: 4px solid #d9534f;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    border-radius: 0 6px 6px 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #333;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.steps-list li:hover {
+    transform: translateX(4px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.steps-list li strong {
+    color: #d9534f;
+    margin-right: 6px;
+}
+
+.steps-list li a {
+    color: #d9534f;
+    text-decoration: underline;
+}
+
+.steps-list li a:hover {
+    color: #B31E1E;
+}
+
+.sub-list {
+    list-style: disc;
+    margin-top: 8px;
+    margin-left: 30px;
+}
+
+.sub-list li {
+    background: none;
+    border-left: none;
+    padding: 4px 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    font-size: 1rem;
+}
+
+.sub-list li:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .steps-list li {
+        padding: 12px 15px;
+    }
+}
