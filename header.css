@@ -112,6 +112,66 @@ header h1 {
     color: #ccc;
 }
 
+/* Kata dropdown inside sliding menu */
+.kata-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.kata-dropdown > a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.kata-dropdown > a:hover {
+    color: #ccc;
+}
+
+.kata-dropdown > a::after {
+    content: ' \25BE';
+    font-size: 0.7rem;
+}
+
+.kata-submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    min-width: 280px;
+    z-index: 1002;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    padding: 0;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.kata-dropdown:hover .kata-submenu {
+    display: block;
+}
+
+.kata-submenu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.kata-submenu a:last-child {
+    border-bottom: none;
+}
+
+.kata-submenu a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ccc;
+}
+
 @keyframes fadeInScale {
     from {
         opacity: 0;
