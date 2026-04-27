@@ -112,12 +112,14 @@
 /* Three Columns */
 .three-columns {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
     margin-top: 40px;
+    align-items: stretch;
 }
 
 .column {
+    width: 100%;
     background: #f8f9fa;
     padding: 20px;
     border-radius: 8px;
@@ -126,6 +128,12 @@
 
 .three-columns .column {
     text-align: center;
+}
+
+.three-columns .column:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .column p {
